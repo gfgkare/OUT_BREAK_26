@@ -35,7 +35,7 @@ const MainLayout = () => {
     const navigate = useNavigate();
 
     const handleRegisterClick = () => {
-        // navigate('/register');
+        navigate('/register');
     };
 
     return (
