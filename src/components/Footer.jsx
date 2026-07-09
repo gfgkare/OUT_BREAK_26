@@ -47,8 +47,8 @@ export const Footer = () => {
                         <div className="space-y-3">
                             <CoordinatorRow name="Anirudh NC" phone="+91 99660 66070" />
                             <CoordinatorRow name="Rakshan Ananth" phone="+91 90035 13022" />
+                            <CoordinatorRow name="P Venunadh" phone="+91 91826 46772" />
                             <CoordinatorRow name="M Abhinay Reddy" phone="+91 63029 14029" />
-                            <CoordinatorRow name="Shruthi M" phone="+91 88708 67242" />
                             <CoordinatorRow name="L Harsha Vardhan" phone="+91 91005 50609" />
                         </div>
                     </div>
