@@ -243,6 +243,62 @@ export const AdminDashboard = () => {
         a.click();
     };
 
+    // CSV Export
+    const downloadCSV = () => {
+        const fileName = viewMode === 'teams' ? 'outbreak26_teams' : 'outbreak26_participants';
+        const esc = (val) => `"${String(val ?? '').replace(/"/g, '""')}"`;
+        let rows = [];
+
+        if (viewMode === 'teams') {
+            rows.push(['Team Name', 'Leader Name', 'Leader Email', 'Leader Phone', 'Leader RegNo', 'Transaction ID', 'Status', 'Submitted At'].map(esc).join(','));
+            filteredData.forEach(reg => {
+                rows.push([
+                    reg.teamName,
+                    reg.teamLeader.name,
+                    reg.teamLeader.email,
+                    reg.teamLeader.phone,
+                    reg.teamLeader.regNo,
+                    reg.payment.transactionId,
+                    'SUCCESS',
+                    new Date(reg.submittedAt).toLocaleString()
+                ].map(esc).join(','));
+            });
+        } else {
+            const participants = getAllParticipants().filter(p => {
+                let match = true;
+                if (searchTerm) {
+                    const lowerTerm = searchTerm.toLowerCase();
+                    match = match && (
+                        p.name.toLowerCase().includes(lowerTerm) ||
+                        p.regNo.toLowerCase().includes(lowerTerm) ||
+                        p.teamName.toLowerCase().includes(lowerTerm) ||
+                        p.teamId.toLowerCase().includes(lowerTerm)
+                    );
+                }
+                if (filterGender !== 'All') match = match && p.gender === filterGender;
+                if (filterAccommodation !== 'All') match = match && p.accommodation === filterAccommodation;
+                return match;
+            });
+            rows.push(['Team Name', 'Name', 'Reg No', 'Email', 'Phone', 'Gender', 'Branch', 'Year', 'Accommodation', 'Hostel Name', 'Room No', 'Warden Name', 'Warden Phone', 'Transaction ID'].map(esc).join(','));
+            participants.forEach(p => {
+                rows.push([
+                    p.teamName, p.name, p.regNo, p.email, p.phone,
+                    p.gender, p.branch, p.year, p.accommodation,
+                    p.hostelName || '-', p.roomNo || '-',
+                    p.wardenName || '-', p.wardenPhone || '-',
+                    p.transactionId
+                ].map(esc).join(','));
+            });
+        }
+
+        const blob = new Blob([rows.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${fileName}_${new Date().toISOString().split('T')[0]}.csv`;
+        a.click();
+    };
+
     return (
         <div className="min-h-screen bg-black text-white font-sans selection:bg-yellow-500/30">
             {/* Minimal Background Img */}
@@ -322,9 +378,14 @@ export const AdminDashboard = () => {
                         <button onClick={fetchData} className="p-2.5 bg-neutral-800 hover:bg-neutral-700 rounded-lg border border-white/10 transition-all text-gray-400 hover:text-white" title="Refresh">
                             <RefreshCw size={18} className={loading ? "animate-spin" : ""} />
                         </button>
-                        <button onClick={downloadExcel} className="flex items-center gap-2 px-4 py-2.5 bg-emerald-600 text-white font-bold rounded-lg hover:bg-emerald-500 transition-all text-sm uppercase tracking-wide shadow-lg shadow-emerald-500/20">
-                            <Download size={16} /> Export XLS
-                        </button>
+                        <div className="flex items-center gap-2">
+                            <button onClick={downloadExcel} className="flex items-center gap-2 px-4 py-2.5 bg-emerald-600 text-white font-bold rounded-l-lg hover:bg-emerald-500 transition-all text-sm uppercase tracking-wide shadow-lg shadow-emerald-500/20">
+                                <Download size={16} /> Export XLS
+                            </button>
+                            <button onClick={downloadCSV} className="flex items-center gap-2 px-4 py-2.5 bg-sky-600 text-white font-bold rounded-r-lg hover:bg-sky-500 transition-all text-sm uppercase tracking-wide shadow-lg shadow-sky-500/20">
+                                <Download size={16} /> Export CSV
+                            </button>
+                        </div>
                     </div>
                 </div>
 
