@@ -11,19 +11,19 @@ const details = [
     {
         id: 1,
         title: "Registration Opens",
-        value: "February 22, 2026",
+        value: "July 22, 2026",
         desc: "The portal opens. Secure your spot before the grid locks.",
         icon: <LockKeyhole size={24} />,
-        date: "FEB 22",
+        date: "JUL 22",
         colSpan: "md:col-span-1"
     },
     {
         id: 2,
         title: "Event Date",
-        value: "30th & 31st March 2026",
+        value: "28th & 29th August 2026",
         desc: "24 hours of intense coding and logic.",
         icon: <Calendar size={24} />,
-        date: "MAR 30-31",
+        date: "AUG 28-29",
         colSpan: "md:col-span-1"
     },
     {

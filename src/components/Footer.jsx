@@ -58,11 +58,11 @@ export const Footer = () => {
                         <h4 className="text-white font-bold text-base mb-6">Faculty Coordinators</h4>
                         <div className="space-y-4 text-sm text-gray-400">
                             <div>
-                                <span className="block text-gray-200 font-medium">Mr. R. Raja Sekar</span>
+                                <span className="block text-gray-200 font-medium">Dr. R. Raja Sekar</span>
                                 <span className="text-xs opacity-70">Assistant Professor / CSE</span>
                             </div>
                             <div>
-                                <span className="block text-gray-200 font-medium">Mrs. S. Reshni</span>
+                                <span className="block text-gray-200 font-medium">Mrs. S. Shanmuga Priya</span>
                                 <span className="text-xs opacity-70">Assistant Professor / CSE</span>
                             </div>
                         </div>
