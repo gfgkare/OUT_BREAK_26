@@ -24,6 +24,11 @@ const events = [
         name: "ALGORITHMST 26",
         image: "/image3.png",
         year: "2026"
+    },
+    {
+        name: "UI-DOPPLE GANGER 26",
+        image: "/image4.png",
+        year: "2026"
     }
 ];
 

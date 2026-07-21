@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Instagram, Linkedin, Mail, Twitter, Phone } from 'lucide-react';
+import { Instagram, Linkedin, Mail } from 'lucide-react';
 
 export const Footer = () => {
     return (
@@ -45,11 +45,9 @@ export const Footer = () => {
                     <div className="lg:col-span-3">
                         <h4 className="text-white font-bold text-base mb-6">Student Coordinators</h4>
                         <div className="space-y-3">
-                            <CoordinatorRow name="Anirudh NC" phone="+91 99660 66070" />
-                            <CoordinatorRow name="Rakshan Ananth" phone="+91 90035 13022" />
-                            <CoordinatorRow name="P Venunadh" phone="+91 91826 46772" />
-                            <CoordinatorRow name="M Abhinay Reddy" phone="+91 63029 14029" />
                             <CoordinatorRow name="L Harsha Vardhan" phone="+91 91005 50609" />
+                            <CoordinatorRow name="Sushmitha N" phone="+91 86882 05314" />
+                            <CoordinatorRow name="P Harshika Suryanjali" phone="+91 95027 95304" />
                         </div>
                     </div>
 
@@ -59,7 +57,7 @@ export const Footer = () => {
                         <div className="space-y-4 text-sm text-gray-400">
                             <div>
                                 <span className="block text-gray-200 font-medium">Dr. R. Raja Sekar</span>
-                                <span className="text-xs opacity-70">Assistant Professor / CSE</span>
+                                <span className="text-xs opacity-70">Associate Professor / CSE</span>
                             </div>
                             <div>
                                 <span className="block text-gray-200 font-medium">Mrs. S. Shanmuga Priya</span>
@@ -72,16 +70,23 @@ export const Footer = () => {
                     <div className="lg:col-span-2">
                         <h4 className="text-white font-bold text-base mb-6">Connect</h4>
                         <div className="flex gap-4 mb-8">
-                            <SocialLink icon={<Instagram size={18} />} href="https://www.instagram.com/gfg_campus_body_kare/" />
-                            <SocialLink icon={<Linkedin size={18} />} href="https://www.linkedin.com/company/gfg-kare-student-chapter/" />
-                            <SocialLink icon={<Mail size={18} />} href="mailto:kare.campus@gfg.org" />
+                            <SocialLink icon={<Instagram size={18} color="#E4405F" />} href="https://www.instagram.com/gfg_campus_body_kare/" />
+                            <SocialLink icon={<Linkedin size={18} color="#0A66C2" />} href="https://www.linkedin.com/company/gfg-kare-student-chapter/" />
+                            <SocialLink icon={<Mail size={18} color="#EA4335" />} href="mailto:kare.campus@gfg.org" />
+                            <SocialLink icon={<img src="/favicon.png" alt="GFG" className="w-5 h-5 object-contain" />} href="https://gfgkare.in/" />
                         </div>
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-white/5 text-center text-xs text-gray-500">
-                    <p>&copy; 2026 GFG Campus Body KARE. All rights reserved.</p>
+                <div className="pt-12 border-t border-secondary/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p className="text-[10px] uppercase tracking-[0.3em] font-medium opacity-70">
+                        © {new Date().getFullYear()} GFG CAMPUS BODY KARE. ALL RIGHTS RESERVED.
+                    </p>
+                    <div className="flex items-center gap-2 opacity-25 text-[10px] uppercase tracking-[0.3em]">
+                        <span>Developed by  </span>
+                        <span className="font-mono">2025-26 BATCH</span>
+                    </div>
                 </div>
             </div>
         </footer>
