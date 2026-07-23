@@ -70,10 +70,10 @@ export const Footer = () => {
                     <div className="lg:col-span-2">
                         <h4 className="text-white font-bold text-base mb-6">Connect</h4>
                         <div className="flex gap-4 mb-8">
-                            <SocialLink icon={<Instagram size={18} color="#E4405F" />} href="https://www.instagram.com/gfg_campus_body_kare/" />
-                            <SocialLink icon={<Linkedin size={18} color="#0A66C2" />} href="https://www.linkedin.com/company/gfg-kare-student-chapter/" />
-                            <SocialLink icon={<Mail size={18} color="#EA4335" />} href="mailto:kare.campus@gfg.org" />
-                            <SocialLink icon={<img src="/favicon.png" alt="GFG" className="w-5 h-5 object-contain" />} href="https://gfgkare.in/" />
+                            <SocialLink icon={<Instagram size={18} />} href="https://www.instagram.com/gfg_campus_body_kare/" hoverClass="hover:text-[#E4405F]" />
+                            <SocialLink icon={<Linkedin size={18} />} href="https://www.linkedin.com/company/gfg-kare-student-chapter/" hoverClass="hover:text-[#0A66C2]" />
+                            <SocialLink icon={<Mail size={18} />} href="mailto:kare.campus@gfg.org" hoverClass="hover:text-[#EA4335]" />
+                            <SocialLink icon={<img src="/favicon.png" alt="GFG" className="w-5 h-5 object-contain opacity-70 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300" />} href="https://gfgkare.in/" />
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ export const Footer = () => {
                     <p className="text-[10px] uppercase tracking-[0.3em] font-medium opacity-70">
                         © {new Date().getFullYear()} GFG CAMPUS BODY KARE. ALL RIGHTS RESERVED.
                     </p>
-                    <div className="flex items-center gap-2 opacity-25 text-[10px] uppercase tracking-[0.3em]">
+                    <div className="flex items-center gap-2 text-white text-[10px] uppercase tracking-[0.3em]">
                         <span>Developed by  </span>
                         <span className="font-mono">2025-26 BATCH</span>
                     </div>
@@ -102,12 +102,12 @@ const CoordinatorRow = ({ name, phone }) => (
     </div>
 );
 
-const SocialLink = ({ icon, href }) => (
+const SocialLink = ({ icon, href, hoverClass = "" }) => (
     <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-neon-green hover:text-black transition-all duration-300"
+        className={`group w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 transition-all duration-300 hover:bg-white/10 ${hoverClass}`}
     >
         {icon}
     </a>
