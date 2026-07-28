@@ -45,9 +45,8 @@ export const Footer = () => {
                     <div className="lg:col-span-3">
                         <h4 className="text-white font-bold text-base mb-6">Student Coordinators</h4>
                         <div className="space-y-3">
-                            <CoordinatorRow name="L Harsha Vardhan" phone="+91 91005 50609" />
-                            <CoordinatorRow name="Sushmitha N" phone="+91 86882 05314" />
-                            <CoordinatorRow name="P Harshika Suryanjali" phone="+91 95027 95304" />
+                            <CoordinatorRow name="L Harsha Vardhan Reddy" role="Chair Person" phone="+91 91005 50609" />
+                            <CoordinatorRow name="P Harshika Suryanjali" role="Campus Mantri" phone="+91 95027 95304" />
                         </div>
                     </div>
 
@@ -93,9 +92,12 @@ export const Footer = () => {
     );
 };
 
-const CoordinatorRow = ({ name, phone }) => (
+const CoordinatorRow = ({ name, role, phone }) => (
     <div className="flex justify-between items-center text-sm text-gray-400 w-full max-w-xs md:max-w-none">
-        <span>{name}</span>
+        <div>
+            <span className="block text-gray-200 font-medium">{name}</span>
+            <span className="block text-xs opacity-70 mt-0.5">{role}</span>
+        </div>
         <a href={`tel:${phone.replace(/\s/g, '')}`} className="text-gray-500 hover:text-neon-green transition-colors text-xs tabular-nums">
             {phone}
         </a>
