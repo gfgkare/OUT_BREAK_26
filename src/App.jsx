@@ -36,7 +36,7 @@ const MainLayout = () => {
 
     const handleRegisterClick = () => {
         navigate('/register');
-    }
+    };
 
     return (
         <div className="app-container relative">
