@@ -81,7 +81,7 @@ export const Header = ({ onRegister }) => {
                     <div className="flex items-center gap-4">
                         {/* Desktop CTA Button */}
                         <button onClick={onRegister} className="hidden md:block relative px-6 py-2 group overflow-hidden">
-                            <div className="absolute inset-0 bg-neon-green transform skew-x-[-15deg] group-hover:bg-yellow-500 transition-colors duration-300 shadow-[0_0_20px_rgba(26,255,125,0.4)] group-hover:shadow-[0_0_20px_rgba(234,179,8,0.4)]"></div>
+                            <div className="absolute inset-0 bg-yellow-500 transform skew-x-[-15deg] group-hover:bg-neon-green transition-colors duration-300 shadow-[0_0_20px_rgba(26,255,125,0.4)] group-hover:shadow-[0_0_20px_rgba(234,179,8,0.4)]"></div>
                             <span className="relative z-10 text-black font-black text-xs tracking-[0.2em] transition-transform group-hover:scale-105 inline-block">
                                 LET'S COOK
                             </span>
