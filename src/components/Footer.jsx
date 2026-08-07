@@ -59,7 +59,7 @@ export const Footer = () => {
                                 <span className="text-xs opacity-70">Associate Professor / CSE</span>
                             </div>
                             <div>
-                                <span className="block text-gray-200 font-medium">Mrs. S. Shanmuga Priya</span>
+                                <span className="block text-gray-200 font-medium">Mrs. S. Reshni</span>
                                 <span className="text-xs opacity-70">Assistant Professor / CSE</span>
                             </div>
                         </div>
