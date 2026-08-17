@@ -35,13 +35,8 @@ const MainLayout = () => {
     const navigate = useNavigate();
 
     const handleRegisterClick = () => {
-<<<<<<< HEAD
         navigate('/register', { state: { fromWebsite: true } });
-    }
-=======
-        navigate('/register');
     };
->>>>>>> 9daef627a3f6f65d92358a72f035e59546623611
 
     return (
         <div className="app-container relative">
