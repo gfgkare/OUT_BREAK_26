@@ -149,7 +149,7 @@ const PersonForm = ({ data, onChange, onBlur, prefix, title, errors, validationS
             <InputField label="Phone NUMBER" value={data.phone} onChange={v => onChange('phone', v)} onBlur={e => onBlur('phone', e.target.value)} error={errors[`${prefix}_phone`]} placeholder="PHONE NO" inputMode="tel" />
 
             <SelectField label="Gender" value={data.gender} onChange={v => onChange('gender', v)} onBlur={e => onBlur('gender', e.target.value)} options={['Male', 'Female', 'Others']} error={errors[`${prefix}_gender`]} />
-            <SelectField label="Year" value={data.year} onChange={v => onChange('year', v)} onBlur={e => onBlur('year', e.target.value)} options={['2', '3', '4']} error={errors[`${prefix}_year`]} />
+            <SelectField label="Year" value={data.year} onChange={v => onChange('year', v)} onBlur={e => onBlur('year', e.target.value)} options={['3', '4']} error={errors[`${prefix}_year`]} />
 
             <InputField label="Branch" value={data.branch} onChange={v => onChange('branch', v)} onBlur={e => onBlur('branch', e.target.value)} error={errors[`${prefix}_branch`]} placeholder="CSE, ECE, IT..." />
             <InputField label="Section" value={data.section} onChange={v => onChange('section', v)} onBlur={e => onBlur('section', e.target.value)} error={errors[`${prefix}_section`]} placeholder="SECTION" />
@@ -813,8 +813,8 @@ export const Registration = ({ onClose }) => {
                                 <div className="text-center w-full">
                                     <div className="flex flex-col items-center border-b border-white/10 pb-4 mb-4">
                                         <span className="text-gray-400 text-xs md:text-sm font-mono uppercase mb-2">Total Amount</span>
-                                        <span className="text-3xl md:text-5xl font-bold text-yellow-500 font-mono mb-2">₹1,400</span>
-                                        <span className="text-sm md:text-lg text-white/80 font-mono font-bold tracking-widest">₹350 / UNIT</span>
+                                        <span className="text-3xl md:text-5xl font-bold text-yellow-500 font-mono mb-2">₹1,200</span>
+                                        <span className="text-sm md:text-lg text-white/80 font-mono font-bold tracking-widest">₹300 / UNIT</span>
                                     </div>
                                     <div className="font-mono text-sm md:text-lg bg-yellow-500/10 border border-yellow-500/20 px-4 md:px-6 py-3 md:py-4 text-yellow-500 break-all md:break-normal">
                                         UPI ID: <span className="font-bold text-white">69097701@ubin</span>

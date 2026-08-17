@@ -156,6 +156,13 @@ export const Intro = ({ onComplete }) => {
                     { scale: 0, rotation: 180 },
                     { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2)" },
                     "-=0.4"
+                )
+
+                // E. Tagline Reveal
+                .fromTo(".intro-tagline",
+                    { y: 20, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                    "-=0.2"
                 );
 
             // 4. HOLD
@@ -279,6 +286,13 @@ export const Intro = ({ onComplete }) => {
                                 </span>
                             </div>
 
+                        </div>
+
+                        {/* 4. TAGLINE */}
+                        <div className="intro-tagline mt-10 md:mt-12 text-center opacity-0">
+                            <p className="text-white text-xs md:text-sm lg:text-base font-bold tracking-[0.4em] uppercase drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+                                Tech4Good : GFG Social Impact Hackathon
+                            </p>
                         </div>
                     </div>
                 </>

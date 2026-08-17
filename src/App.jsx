@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Hero } from './components/Hero';
@@ -35,7 +35,7 @@ const MainLayout = () => {
     const navigate = useNavigate();
 
     const handleRegisterClick = () => {
-        navigate('/register');
+        navigate('/register', { state: { fromWebsite: true } });
     }
 
     return (
@@ -67,6 +67,12 @@ const MainLayout = () => {
 // Standalone Registration Page Wrapper
 const RegistrationPage = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+
+    // Prevent direct URL access
+    if (!location.state?.fromWebsite) {
+        return <Navigate to="/" replace />;
+    }
 
     return (
         <div className="min-h-screen bg-black relative">

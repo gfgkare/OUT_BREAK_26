@@ -11,10 +11,10 @@ const details = [
     {
         id: 1,
         title: "Registration Opens",
-        value: "July 22, 2026",
+        value: "Aug 17, 2026",
         desc: "The portal opens. Secure your spot before the grid locks.",
         icon: <LockKeyhole size={24} />,
-        date: "JUL 22",
+        date: "AUG 17",
         colSpan: "md:col-span-1"
     },
     {
@@ -38,7 +38,7 @@ const details = [
     {
         id: 4,
         title: "Registration Fee",
-        value: "₹350 / Participant",
+        value: "₹300 / Participant",
         desc: "Small investment for massive return.",
         icon: <Wallet size={24} />,
         date: "ENTRY",

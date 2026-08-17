@@ -167,9 +167,14 @@ export const Hero = ({ onRegister }) => {
 
                     </div>
 
-                    <p className="subtitle text-neon-green text-sm md:text-lg font-bold tracking-[0.4em] mt-12 flicker uppercase">
-                        Breaking Code
-                    </p>
+                    <div className="subtitle text-center">
+                        <p className="text-white text-base md:text-xl lg:text-2xl font-bold tracking-[0.4em] mt-12 flicker uppercase drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+                            Tech4Good : GFG Social Impact Hackathon
+                        </p>
+                        <p className="text-neon-green text-sm md:text-lg lg:text-xl font-bold tracking-[0.3em] mt-4 flicker uppercase opacity-90 drop-shadow-[0_0_8px_rgba(26,255,125,0.5)]">
+                            Hack the Formula , Change the Game
+                        </p>
+                    </div>
                 </div>
 
                 <div className="max-w-2xl mx-auto">

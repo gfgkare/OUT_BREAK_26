@@ -8,10 +8,10 @@ import { FloatingElements } from './FloatingElements';
 const features = [
     {
         title: "Grand Prize Pool",
-        value: "₹20,000",
-        desc: "To win a Grand Prize Pool of Rs. 20,000/-. recognition favors the bold.",
+        value: "₹10,000",
+        desc: "To win a Grand Prize Pool of Rs. 10,000/-. recognition favors the bold.",
         icon: <Trophy size={32} />,
-        code: "WIN-20K"
+        code: "WIN-10K"
     },
     {
         title: "Academic Credits",
@@ -110,7 +110,7 @@ export const Features = () => {
                             className={`${item.title === "Grand Prize Pool" ? "h-full md:-mt-8 md:mb-8" : "h-full"}`} // Offset to make it pop out vertically
                         >
                             <TiltCard className="h-full">
-                                <div className={`h-full p-6 md:p-8 rounded-xl relative overflow-hidden group flex flex-col transition-all duration-500 backdrop-blur-sm ${item.title === "Grand Prize Pool" ? "scale-100 md:scale-120 border-yellow-400 border-[3px] shadow-[0_0_40px_rgba(234,179,8,0.5)] md:shadow-[0_0_80px_rgba(234,179,8,0.8)] bg-yellow-500/20 z-20" : "border-yellow-500/20 hover:border-yellow-400/50 shadow-lg hover:shadow-[0_0_30px_rgba(234,179,8,0.2)] bg-yellow-500/5"}`}>
+                                <div className={`h-full p-6 md:p-8 rounded-xl relative overflow-hidden group flex flex-col transition-all duration-500 backdrop-blur-sm ${item.title === "Grand Prize Pool" ? "scale-100 md:scale-110 border-yellow-400 border-[3px] shadow-[0_0_40px_rgba(234,179,8,0.5)] md:shadow-[0_0_80px_rgba(234,179,8,0.8)] bg-yellow-500/20 z-20" : "border-yellow-500/20 hover:border-yellow-400/50 shadow-lg hover:shadow-[0_0_30px_rgba(234,179,8,0.2)] bg-yellow-500/5"}`}>
 
                                     {/* Tech Overlay Lines */}
                                     <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-yellow-500/20 to-transparent"></div>
