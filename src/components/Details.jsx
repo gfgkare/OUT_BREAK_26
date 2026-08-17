@@ -47,7 +47,7 @@ const details = [
     {
         id: 5,
         title: "Venue",
-        value: "8th Block Seminar Hall",
+        value: "9th Block Seminar Hall",
         desc: "The arena where legends will be forged.",
         icon: <MapPin size={24} />,
         date: "LOC",
