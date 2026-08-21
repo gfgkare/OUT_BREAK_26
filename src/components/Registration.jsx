@@ -149,7 +149,7 @@ const PersonForm = ({ data, onChange, onBlur, prefix, title, errors, validationS
             <InputField label="Phone NUMBER" value={data.phone} onChange={v => onChange('phone', v)} onBlur={e => onBlur('phone', e.target.value)} error={errors[`${prefix}_phone`]} placeholder="PHONE NO" inputMode="tel" />
 
             <SelectField label="Gender" value={data.gender} onChange={v => onChange('gender', v)} onBlur={e => onBlur('gender', e.target.value)} options={['Male', 'Female', 'Others']} error={errors[`${prefix}_gender`]} />
-            <SelectField label="Year" value={data.year} onChange={v => onChange('year', v)} onBlur={e => onBlur('year', e.target.value)} options={['3', '4']} error={errors[`${prefix}_year`]} />
+            <SelectField label="Year" value={data.year} onChange={v => onChange('year', v)} onBlur={e => onBlur('year', e.target.value)} options={['2','3', '4']} error={errors[`${prefix}_year`]} />
 
             <InputField label="Branch" value={data.branch} onChange={v => onChange('branch', v)} onBlur={e => onBlur('branch', e.target.value)} error={errors[`${prefix}_branch`]} placeholder="CSE, ECE, IT..." />
             <InputField label="Section" value={data.section} onChange={v => onChange('section', v)} onBlur={e => onBlur('section', e.target.value)} error={errors[`${prefix}_section`]} placeholder="SECTION" />
