@@ -861,7 +861,7 @@ export const Registration = ({ onClose }) => {
                             <AlertCircle className="w-6 h-6 text-red-500 shrink-0 mt-0.5 relative z-10" />
                             <p className="text-red-100 text-xs md:text-sm font-mono leading-relaxed relative z-10">
                                 <strong className="text-red-500 block mb-1 tracking-widest uppercase text-base">Critical Notice:</strong>
-                                Ensure all details are accurate before submission. Once registered, details cannot be modified and will be used for CERTIFICATES & CREDITS.
+                                Ensure all details are accurate before submission. Once registered, details cannot be modified and will be used for CERTIFICATES & CREDITS.Ensure that second years will not be provided with EE credits.
                             </p>
                         </div>
                     </div>
