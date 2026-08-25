@@ -183,19 +183,25 @@ export const Hero = ({ onRegister }) => {
                         Department of Computer Science and Engineering
                     </h2>
 
-                    <div className="cta-group flex flex-wrap justify-center gap-4 md:gap-6">
-                        <button onClick={onRegister} className="relative px-6 py-3 md:px-8 md:py-4 bg-yellow-500 text-black font-bold rounded-sm border border-neon-green hover:bg-neon-green hover:text-black transition-all duration-300 group shadow-[0_0_20px_rgba(26,255,125,0.6)] overflow-hidden">
-                            <span className="relative z-10 flex items-center gap-2 tracking-widest font-mono text-xs md:text-sm font-black">
-                                <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-black rounded-full animate-pulse"></span>
-                                REGISTER NOW
-                            </span>
-                        </button>
-                        <button
-                            onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="px-8 py-4 bg-transparent border border-white/10 text-gray-300 font-bold rounded-sm hover:border-yellow-500 hover:text-yellow-500 transition-all duration-300 tracking-widest font-mono text-sm group"
-                        >
-                            <span className="group-hover:drop-shadow-[0_0_8px_rgba(234,179,8,0.8)]">VIEW_DATA</span>
-                        </button>
+                    <div className="cta-group flex flex-col items-center gap-5">
+                        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                            <button disabled className="relative px-6 py-3 md:px-8 md:py-4 bg-gray-800 text-gray-400 font-bold rounded-sm border border-gray-700 cursor-not-allowed transition-all duration-300 group shadow-none overflow-hidden opacity-90">
+                                <span className="relative z-10 flex items-center gap-2 tracking-widest font-mono text-xs md:text-sm font-black">
+                                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-gray-500 rounded-full"></span>
+                                    REGISTER NOW
+                                </span>
+                            </button>
+                            <button
+                                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                                className="px-8 py-4 bg-transparent border border-white/10 text-gray-300 font-bold rounded-sm hover:border-yellow-500 hover:text-yellow-500 transition-all duration-300 tracking-widest font-mono text-sm group"
+                            >
+                                <span className="group-hover:drop-shadow-[0_0_8px_rgba(234,179,8,0.8)]">VIEW_DATA</span>
+                            </button>
+                        </div>
+                        <div className="px-5 py-2.5 bg-red-950/80 border border-red-500/60 rounded-sm text-red-400 font-black tracking-widest font-mono text-sm md:text-base uppercase shadow-[0_0_20px_rgba(239,68,68,0.4)] backdrop-blur-sm flex items-center gap-2">
+                            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                            REGISTRATIONS ARE CLOSED
+                        </div>
                     </div>
                 </div>
             </div>

@@ -80,14 +80,14 @@ export const Header = ({ onRegister }) => {
 
                     <div className="flex items-center gap-4">
                         {/* Desktop CTA Button */}
-                        <button onClick={onRegister} className="hidden md:block relative px-6 py-2 group overflow-hidden">
-                            <div className="absolute inset-0 bg-yellow-500 transform skew-x-[-15deg] group-hover:bg-neon-green transition-colors duration-300 shadow-[0_0_20px_rgba(26,255,125,0.4)] group-hover:shadow-[0_0_20px_rgba(234,179,8,0.4)]"></div>
-                            <span className="relative z-10 text-black font-black text-xs tracking-[0.2em] transition-transform group-hover:scale-105 inline-block">
+                        <button disabled className="hidden md:block relative px-6 py-2 group overflow-hidden opacity-80 cursor-not-allowed">
+                            <div className="absolute inset-0 bg-gray-600 transform skew-x-[-15deg] shadow-[0_0_15px_rgba(100,116,139,0.3)]"></div>
+                            <span className="relative z-10 text-gray-300 font-black text-xs tracking-[0.2em] inline-block">
                                 LET'S COOK
                             </span>
                             {/* Corner accents */}
-                            <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-white/40 group-hover:border-black/40 transition-colors"></div>
-                            <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-white/40 group-hover:border-black/40 transition-colors"></div>
+                            <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-gray-400"></div>
+                            <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-gray-400"></div>
                         </button>
 
                         {/* Mobile Menu Button */}
@@ -120,9 +120,9 @@ export const Header = ({ onRegister }) => {
 
                     <div className="w-16 h-1 bg-white/10 rounded-full"></div>
 
-                    <button onClick={() => { setIsMenuOpen(false); onRegister(); }} className="relative px-10 py-4 bg-neon-green text-black font-bold rounded-sm group overflow-hidden">
+                    <button disabled className="relative px-10 py-4 bg-gray-600 text-gray-300 font-bold rounded-sm group overflow-hidden opacity-80 cursor-not-allowed">
                         <span className="relative z-10 font-mono tracking-widest text-sm flex items-center gap-2">
-                            <span className="w-2 h-2 bg-black rounded-full animate-pulse"></span>
+                            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
                             LET'S COOK
                         </span>
                     </button>
