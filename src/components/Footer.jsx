@@ -70,7 +70,7 @@ export const Footer = () => {
                         <h4 className="text-white font-bold text-base mb-6">Connect</h4>
                         <div className="flex gap-4 mb-8">
                             <SocialLink icon={<Instagram size={18} />} href="https://www.instagram.com/gfg_campus_body_kare/" hoverClass="hover:text-[#E4405F]" />
-                            <SocialLink icon={<Linkedin size={18} />} href="https://drive.google.com/drive/folders/1u73-jUI6XUONjOR47QKfCP5cjzQfPBdD?usp=sharing/" hoverClass="hover:text-[#0A66C2]" />
+                            <SocialLink icon={<Linkedin size={18} />} href="https://drive.google.com/drive/folders/1u73-jUI6XUONjOR47QKfCP5cjzQfPB?usp=sharing/" hoverClass="hover:text-[#0A66C2]" />
                             <SocialLink icon={<Mail size={18} />} href="mailto:kare.campus@gfg.org" hoverClass="hover:text-[#EA4335]" />
                             <SocialLink icon={<img src="/favicon.png" alt="GFG" className="w-5 h-5 object-contain opacity-70 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300" />} href="https://gfgkare.in/" />
                         </div>
